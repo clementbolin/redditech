@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master, ci ]
+    branches: [ master, ci, api/** ]
   pull_request:
     branches: [ master, dev ]
 
@@ -34,5 +34,5 @@ jobs:
       - name: Build go API
         run: cd api/ && go build -o api -v ./...
       
-      - name: Run go application
-        run: ./api/api
+      - name: Run tests API
+        run: go test -cover ./... -v
