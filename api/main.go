@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"github.com/redditech/api"
+	"github.com/redditech/configs"
+)
 
 func main() {
-	fmt.Println("Hello world")
+	config := &configs.Config{}
+	config.InitConfig("./configs/config.json")
+	config.ReadConfig()
+	router := api.InitRouter()
+	router.Run(":8080")
 }
