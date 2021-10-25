@@ -18,6 +18,7 @@ func SetupRouter() *gin.Engine {
 	router.POST("/get/access_token", getToken)
 	router.POST("/ping/get_access_token", getAccessToken)
 	router.GET("/get/subreddits", getSubreddits)
+	router.GET("/get/profil", getProfil)
 
 	return router
 }
