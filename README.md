@@ -1,6 +1,14 @@
 # REDDITECH
 
-![gif](./assets/redditech.gif)
+<div style='
+  display: flex;
+  justify-content: center;
+  height: 800px;
+  margin-bottom: 20px
+'>
+  <img src='./assets/redditech.gif' alt='gif'>
+</div>
+
 
 ## How to build and install Front
 
